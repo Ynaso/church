@@ -1,0 +1,18 @@
+{% extends "formulario/base_programa.html" %}
+
+{% load  static %}
+
+{% block content %}
+
+
+  <h1>Registrar Museo</h1>
+  <form method="post">{% csrf_token %}
+    {% block extrahead %}
+    {{ block.super }}
+    {{ form }}
+    {% endblock %}
+    <button type="submit">Registrar</button>
+  </form>
+
+
+{% endblock content %}
